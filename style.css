@@ -1,9 +1,10 @@
 html , body{
-	margin: auto;
-    padding: 0;
-    height: 100%;
-	width: 100%;
-    font-family:'Roboto', sans-serif;
+margin: auto;
+padding: 0;
+height: 100%;
+width: 100%;
+font-family:'Roboto', sans-serif;
+scroll-behavior: smooth;
 }
 /* Définition des polices personnalisées */
 
