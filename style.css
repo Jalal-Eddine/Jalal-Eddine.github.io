@@ -4,6 +4,7 @@ padding: 0;
 height: 100%;
 width: 100%;
 font-family:'Roboto', sans-serif;
+overflow-y: scroll;
 scroll-behavior: smooth;
 }
 /* Définition des polices personnalisées */
