@@ -4,17 +4,18 @@ html , body{
     height: 100%;
     width: 100%;
     font-family:'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 /*Header stylesheet*/
-header{
-	position:relative;  
+header{  
 	background-color: rgb(255,255,255);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	height: 80px;
-	position: sticky ;
+	width: 100%;
+	position: fixed ;
 	top: 0;
 	z-index: 200;
 }
@@ -28,7 +29,6 @@ nav ul{
 }
 nav li{
 	margin-right: 15px;
-	border-top: solid #5cadd3;
 
 }
 nav a{
@@ -145,7 +145,7 @@ nav a{
 	width: 550px;
 	top: 25%;
 	left: 10%;
-	border: solid black;
+	/*border: solid black;*/
 	color: #ffffff;
 }
 .text h1, .text h4 , .text h3{
@@ -168,17 +168,22 @@ nav a{
 
 }
 /*page 2 style*/
-section p{
-	opacity: 0.7;
+
+ #page2, #page3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+section p{
+	opacity: 0.7
+}
+/*section p {opacity: 0.7;}*/
 .title_page{
 	position: relative;
-	border: solid 1px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 50%;
-    left: 25%;
 }
 .title_page h1, .title_page p{
 	text-align: center;
@@ -210,28 +215,25 @@ section p{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	border:solid 2px azure;
 	margin-top: 5%;
 
 }
 .image {
 	position: relative;
-    border: 1px solid black;
     padding: 0%;
     left: 15%;
 }
 .list_serv{
 	position: relative;
-    border: 2px solid blue;
     display: flex;
     flex-direction: row;
     left: 25%;
     width: 40%;
     min-width: 30%;
-    margin-top: 5%;
+    margin-top: 4%;
+    margin-bottom: 2%;
 }
 .icon{
-	border: solid 1px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -239,7 +241,7 @@ section p{
 }
 .serv_list{
 	position: relative;
-	border: solid 1px;
+	/*border: solid 1px;*/
 	/*width: 35%;*/
 	left: 2%;
 }
@@ -272,17 +274,14 @@ section p{
 	color: rgba(51,153,204,1);
 }
  /*page 3 style*/
- .page3 {
+ #page3 {
 	background-color: #f5f5f5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 /*Manu style*/
+
 .list_proj{
 	position: relative;
-	/*border: solid 1px;*/
 	width: 350px;
 	height: 40px;
     min-width: 350px;
@@ -349,4 +348,88 @@ section p{
 }
 
 /*page4*/
+#page4{
+	position: relative;
+	background-color: #aec5ca;
+	height: 100%;
+	width: 100%;
 
+}
+.mapouter{
+	/*border: solid 1px;*/
+	text-align:right;
+	height:100%;
+	width:100%;
+	opacity: 0.7;
+	}
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:100%;
+	width:100%;
+}
+.form{
+	position: absolute;
+	/*border: solid 1px;*/
+	/*width: 25%;*/
+	width: 360px;
+	height: 70%;
+	right: 15%;
+	top: 6%;
+	background-color: rgba(255,255,255,0.7);
+	display: flex;
+	flex-direction: column;
+}
+.contact{
+    /*border: solid 1px;*/
+    position: relative;
+	width: 90%;
+	left: 5%;
+
+}
+.contact h1{
+    margin: 5% 0 5% 0;
+    font-weight: bold;
+}
+.contact h4{
+	font-weight: bold;
+}
+ .contact h4, .contact p{
+	margin: 0;
+}
+.contact p{
+	margin-bottom: 5%;
+}
+form{
+	position: relative;
+	width: 90%;
+	left: 5%;
+	height: 70%;
+    /*border: solid 1px;*/
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+	height: 50%;
+	margin-bottom: 2%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+#page4 input{
+    height: 8%;
+    border: 1px solid #cccccc;
+    border-radius: 5px; 
+}
+.form #valid{
+	width: 33%;
+	height: 10%;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #3399cc;
+	border-color: #5cadd3;
+	border-radius: 3px;
+	border:solid 1px;
+	margin-top: 5px;
+	cursor: pointer;
+
+}
