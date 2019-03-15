@@ -6,23 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
 </head>
 <body>
 		<header>
 			<div id="logo">
-				<img src="images/logo.png" alt="WebAgency">
+				<img src="logo.png" alt="WebAgency">
 			</div>
 			<nav>
 				<ul>
-					<li><a href="#home">Accueil</a></li>
-					<li><a href="#services">Services</a></li>  
-				    <li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact_infos">Contact</a></li>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Services</a></li>  
+				    <li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
-        <div class="container" id="home">	
-	         <div class="text">
+        <div class="container">	
+	        <div class="text">
 		         <h1><em>WEBAGENCY</em> : L'AGENCE DE TOUS VOS PROJETS!</h1><br>
 		         <h4>Vous avez un projet web? La WebAgency vous aide à le réaliser !</h4><br><h3>Plus d'infos</h3>
 	        </div>    	
@@ -30,103 +31,101 @@
 	        <input type="radio" id="i2" name="images" />
 
 	        <div class="slide_img" id="one">					
-			    <img src="images/slider/bg1.jpg">		
-				<label class="prev" for="i2"><span>&#x2039;</span></label>
-				<label class="next" for="i2"><span>&#x203a;</span></label>	
+			    <img src="bg1.jpg">		
+				<label class="prev" for="i2"><i class="fas fa-angle-down" id="left_arrow"></i></label>
+				<label class="next" for="i2"><i class="fas fa-angle-down" id="right_arrow"></i></label>	
 	        </div>
 	        <div class="slide_img" id="two">
-			    <img src="images/slider/bg2.jpg " >	
-				<label class="prev" for="i1"><span>&#x2039;</span></label>
-				<label class="next" for="i1"><span>&#x203a;</span></label>	
+			    <img src="bg2.jpg " >	
+				<label class="prev" for="i1"><i class="fas fa-angle-down" id="left_arrow"></i></label>
+				<label class="next" for="i1"><i class="fas fa-angle-down" id="right_arrow"></i></label>	
 	        </div>			
 	        <div id="nav_slide"> 
 	         	<label for="i1" class="dots" id="dot1"></label>
 	        	<label for="i2" class="dots" id="dot2"></label>
 	        </div>	
         </div>
-<!-- page two -->
-        <section id="services">
+        <!-- page2 -->
+	<section>
 		<div class="title_page">
 			<h1>NOS SERVICES</h1>
+			<div class="hr"></div>
+			<div class="title-circle" ></div>
 		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		    </p>
 		</div>
+		<div id="bloc_services">
 		<div class="image">
-			<img src="images/main-feature.png">
+			<img src="main-feature.png">
 		</div>
 		<div class="list_serv">
-			<ul>
-				<li>
+			<div class="icon">
+				    <div class="mini-circle" ></div>
+					<div class="circle">
+					<span><i class="fas fa-chart-line"></i></span></div>
+
+                    <div class="mini-circle" ></div>
+					<div class="circle">
+					<span><i class="fas fa-cubes"></i></span></div>
+
+                    <div class="mini-circle" ></div>
+					<div class="circle">
+					<span><i class="fas fa-chart-pie"></i></span></div>								
+			</div>
+
+			<div class="serv_list">
 					<h3>UX design</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. </p>
-				</li>
-				<li>
-					<h3>UX design</h3>
+					
+					<h3>UI design</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. </p>
-				</li>
-				<li>
-					<h3>UX design</h3>
+				    
+					<h3>SEO</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.  </p>
-				</li>								
-			</ul>
+		    </div>
+		</div>
 		</div>
 	</section>
-<!-- page three	 -->
-	<section id="portfolio">
+	<!-- page3 -->
+	<div class="page3" id="page_three">
 		<div class="title_page">
 			<h1>NOS PROJETS</h1>
+			<div class="hr"></div>
+			<div class="title-circle" ></div>
 		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		    </p>
+		    </p>		    
 		</div>
 		<div class="list_proj">
-			<ul>
-				<li><a href="#">All Works</a></li>
-				<li><a href="#">Creative</a></li>  
-				<li><a href="#">Corporate</a></li>
-				<li><a href="#">Portfolio</a></li>							
-			</ul>
-		</div>
-		<div class="portfolio">
-		    <img src="images/portfolio/01.jpg">
-		    <img src="images/portfolio/02.jpg">
-		    <img src="images/portfolio/03.jpg">
-		    <img src="images/portfolio/04.jpg">
-		    <img src="images/portfolio/05.jpg">
-		    <img src="images/portfolio/06.jpg">
-		    <img src="images/portfolio/07.jpg">
-		    <img src="images/portfolio/08.jpg">
-		    <img src="images/portfolio/full.jpg">
-	    </div>
-	</section>
-<!-- page four	 -->
-    <section id="contact_infos">
-	<div class="mapouter">
-		<div class="gmap_canvas">
+			<input type="radio" id="m1" name="menu" checked>
+			<input type="radio" id="m2" name="menu">
+			<input type="radio" id="m3" name="menu">
+			<input type="radio" id="m4" name="menu">
 
-			<iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=25%20Rue%20D'auteville%2075010%20Paris&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-			<a href="https://www.embedgooglemap.net"></a>
+			<div id="list_menu">
+				<label class="menu" for="m1" id="l1"> All Works</label>
+				<label class="arrow" for="m1" id="a1"><i class="fas fa-caret-down"></i></label>
+				<label class="menu" for="m2" id="l2"> Creative</label>
+				<label class="menu" for="m3" id="l3"> Corporate</label>
+				<label class="menu" for="m4" id="l4"> Portfolio</label>
+			</div>
+		</div>
+		<div class="portfolio" id="1">
+		    <img src="projet1/images/portfolio/01.jpg">
+		    <img src="projet1/images/portfolio/02.jpg">
+		    <img src="projet1/images/portfolio/03.jpg">
+		    <img src="projet1/images/portfolio/04.jpg">
+		    <img src="projet1/images/portfolio/05.jpg">
+		    <img src="projet1/images/portfolio/06.jpg">
+		    <img src="projet1/images/portfolio/07.jpg">
+		    <img src="projet1/images/portfolio/08.jpg">
+		    <img src="projet1/images/portfolio/full.jpg">
 	    </div>
-	</div>	
-	<div class="form">
-		<div class="contact">
-		  <h1>Contact Info</h1>
-		  <h4>WebAgency SAS</h4>
-		  <p>25 Rue d'Hauteville 75010 Paris<br>
-		  Tel : 01 02 03 04 05</p>
-	    </div>	
-	    <form method="POST">
-		  <input type="text" name="name" placeholder="  Name"><br>
-		  <input type="email" name="email" placeholder="  Email"><br>
-		  <input type="text" name="subject" placeholder="  Subject"><br>
-		  <textarea name="message" id="message" placeholder=" Message" ></textarea>
-		  <input type="submit" value="Send Message" id="valid">
-	    </form>
 	</div>
-	</section>
+	
 </body>
-</html>		
+</html>			
