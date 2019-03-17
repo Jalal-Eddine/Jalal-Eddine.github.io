@@ -32,6 +32,7 @@ html , body{
     font-style: normal;
 }
 /*Header stylesheet*/
+
 header{  
 	background-color: rgb(255,255,255);
 	display: flex;
@@ -70,7 +71,6 @@ nav a{
 		margin-bottom: 75px;
 		position: relative;
 		width: 100%;
-		/*height: 0;*/
 		padding-bottom: 38%;
 	  user-select: none;
 	}
@@ -167,24 +167,29 @@ nav a{
 	position: absolute;
 	z-index: 100;
 	height: 175px;
-	width: 550px;
+	width: 560px;
 	top: 25%;
 	left: 10%;
-	/*border: solid black;*/
+	border: solid black;
 	color: #ffffff;
+
 }
-.text h1, .text h4 , .text h3{
+.text h1, .text h4 , .text a{
 	margin: 0px;
+	font-size: 10em,
 }
-.text h3{
+.text a{
 	width: 20%;
 	height: 20%;
-	/*bottom: 0;*/
-	/*left: 0;*/
 	background-color: #5cadd3;
 	border-radius: 3px 3px 3px 3px;
 	cursor: pointer;
 	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 }
 .text em{
@@ -308,9 +313,10 @@ section p{
 .list_proj{
 	position: relative;
 	width: 350px;
-	height: 40px;
+	/*height: 40px;*/
     min-width: 350px;
     margin: 5% 0 5% 0;
+    /*border:solid 3px green;*/
 }
 #m1 ,#m2, #m3 , #m4{display: none;}
 .list_proj #list_menu{
@@ -318,7 +324,7 @@ section p{
 	justify-content: center;
     background-color: rgba(204,204,204,0.5);
 	margin: 0;
-	/*border: solid 1px;*/
+	/*border: solid 2px red;*/
 	border-radius: 5%;
 
 }
@@ -328,16 +334,18 @@ section p{
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	border-radius: 5%;
+	/*border-radius: 5px;*/
 	height: 40px;
 	width: 88px;
-	text-align: center;
+
 }
-#list_menu .arrow{
-	position: absolute;
-	top: 62.7%;
-	left: 9%;
-	font-size: 2em;
+.list_proj .arrow{
+	position: relative;
+	display: inline;
+	margin: 32px;
+	bottom: 12px;
+	left: 5px;
+	font-size: 1.7em;
 	color: #f5f5f5;
 }
 
@@ -348,12 +356,13 @@ section p{
   {
 	background-color: rgba(51,153,204,0.8);
 	color: #fff;
-	border-bottom: 5px;
 	border-color: rgba(70,140,173,1);
 }
-#m1:checked~ #list_menu #a1{
-	color: rgba(70,140,173,0.8);
-}
+#m1:checked~  #a1,
+#m2:checked~  #a2,
+#m3:checked~  #a3,
+#m4:checked~  #a4
+{color: rgba(51,153,204,0.8);}
 .portfolio{
 	display: flex;
 	flex-wrap: wrap;
@@ -361,18 +370,78 @@ section p{
 	position: relative;
 	width: 80%;
 }
-.portfolio img {
+.gallery {
+	background-size: cover;
+	margin: 10px;
 	width: 260px;
 	height: 172px;
-	margin: 10px;
-	transition: all 1s;
+	/*transition: all 1s;*/
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	flex-direction: column;
 }
+.gallery:nth-child(1){background-image: url(images/portfolio/01.jpg);}
+.gallery:nth-child(2){background-image: url(images/portfolio/02.jpg);}
+.gallery:nth-child(3){background-image: url(images/portfolio/03.jpg);}
+.gallery:nth-child(4){background-image: url(images/portfolio/04.jpg);}
+.gallery:nth-child(5){background-image: url(images/portfolio/05.jpg);}
+.gallery:nth-child(6){background-image: url(images/portfolio/06.jpg);}
+.gallery:nth-child(7){background-image: url(images/portfolio/07.jpg);}
+.gallery:nth-child(8){background-image: url(images/portfolio/08.jpg);}
+.gallery:nth-child(9){background-image: url(images/portfolio/full.jpg);}
 
-.portfolio img:hover {
+/*.gallery .image_desc,.image_desc *,.gallery span .gallery * {
+	opacity: 0;
+}
+.gallery:hover .gallery *{
+	opacity: 1;
+}*/
+/*		animation: scroll 1s ease-in-out;
+}
+@keyframes scroll{
+	0%{	opacity:0;}
+	100%{opacity:1;}	
+}*/
+
+.image_desc{
+	height: 60px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+
+}
+.image_desc *{
+	margin: 0;
+	margin-left: 10px;
+}
+ .gallery span{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	top: 14%;
+	right: 3%;
+	border:solid 2px #fff;
+	border-radius: 50%;
+	color: #fff;
+	background-color: rgba(51,153,153,1);
+}
+.image_desc,.gallery span{z-index: -1;}
+.gallery:hover .image_desc{z-index: 99;}
+.gallery:hover .portfolio span{z-index: 100;}
+
+.portfolio .gallery:hover {
 	transform: scale(1.1);
 }
 
 /*page4*/
+
 #page4{
 	position: relative;
 	background-color: #aec5ca;
@@ -381,7 +450,6 @@ section p{
 
 }
 .mapouter{
-	/*border: solid 1px;*/
 	text-align:right;
 	height:100%;
 	width:100%;
