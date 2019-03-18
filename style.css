@@ -229,6 +229,9 @@ section p{
 .title_page h1, .title_page p{
 	text-align: center;
 }
+.title_page p{
+	margin-top: 5%;
+}
 #page2  h1,#page3 h1{
 	font-weight: bold;
 	font-size: 2em;
@@ -251,7 +254,6 @@ section p{
     border-color: #fff;
     border-radius: 110%;
     top: 46%;
-
 }
 #bloc_services{
 	display: flex;
