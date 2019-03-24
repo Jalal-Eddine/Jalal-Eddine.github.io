@@ -43,6 +43,7 @@ header{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 	height: 80px;
 	width: 100%;
 	position: fixed ;
@@ -53,13 +54,25 @@ header{
 
 }
 nav ul{
+	width: 330px;
 	list-style-type: none;
 	display: flex;
+	flex-direction: row;
+    justify-content:center;
+    align-items: center; 
+/*	border:solid 1px red;*/
 
 }
 nav li{
 	margin-right: 15px;
-
+	height: 80px;
+	width:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li:hover{
+	border-top: solid 5px rgba(51, 153, 204,.8);
 }
 nav a{
     font-size: 1em;
@@ -75,7 +88,7 @@ li a:target
 
 .container{
 		margin: 0 auto;
-		margin-top: 20px;
+		margin-top: 5%;
 		margin-bottom: 75px;
 		position: relative;
 		width: 100%;
@@ -276,6 +289,7 @@ section p{
     min-width: 30%;
     margin-top: 4%;
     margin-bottom: 2%;
+    border:solid 1px;
 }
 .icon{
 	display: flex;
@@ -284,8 +298,10 @@ section p{
 
 }
 .serv_list{
+	border:solid red;
 	position: relative;
 	left: 2%;
+	margin-right: 3%;
 	margin-left: 3%;
 }
 .list_serv .circle {
@@ -448,7 +464,7 @@ section p{
 }
 .image_desc,.gallery span{z-index: -1;}
 .gallery:hover .image_desc{z-index: 99;}
-.gallery:hover .portfolio span{z-index: 100;}
+.gallery:hover span{z-index: 100;}
 
 .portfolio .gallery:hover {
 	transform: scale(1.1);
